@@ -29,3 +29,15 @@ string_to_list = list(string_ex)     # 문자열의 list화
 string_to_set = set(string_ex)       # 문자열의 set화
 print(string_to_list)
 print(string_to_set)                 # 순서는 없지만 중복이 제거된 채로 출력되게 된다.
+
+# dictionary
+# hash table과 동일하다고 생각하면 된다.
+
+student_info = {201835539 : "최철웅"}
+student_info[201835538] = "임인범"
+student_info["201835539"] = "another_최철웅"
+# 주의할 점은 같은 201835539이라도 문자열인지 정수인지에 따라 다른 key값을 가지게 된다.
+print(student_info)
+print(student_info.items())
+print(student_info.keys())
+print(student_info.values())
