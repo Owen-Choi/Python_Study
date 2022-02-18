@@ -15,6 +15,12 @@ def f() :
     global s        # 전역변수를 그대로 사용하겠다는 의미
     s = "I love London"
 
+def add_all(*args) :    # *(매개변수 이름)은 몇개의 매개변수가 와도 모두 tuple의 형태로 전달한다.
+    result = 0
+    for i in args :
+        result += i
+    return result
+
 x = int(input("please enter the x value : "))
 y = int(input("please enter the y value : "))
 print(calculate(x,y))
@@ -27,3 +33,5 @@ s = "I love Paris"
 print(s)
 f()
 print(s)            # global 변수의 사용으로 인해 이 출력문의 결과는 함수 내부에서 바뀐 결과로 출력이 된다.
+
+print(add_all(1,5,3,4,8,63,5,4,9))
