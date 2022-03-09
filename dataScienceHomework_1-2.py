@@ -1,5 +1,3 @@
-
-
 def makeDict(K, V):
     D = {K[0]: V[0]}
     if(len(K) != len(V)):
