@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 
 train_url = "http://s3.amazonaws.com/assets.datacamp.com/course/Kaggle/train.csv"
@@ -56,11 +56,12 @@ train[["SibSp", "Survived"]].groupby(['SibSp'], as_index=False).mean().sort_valu
 # matplotlib만 import할 것이 아니라
 g = sns.FacetGrid(train, col='Survived')
 g.map(plt.hist, 'Age', bins=20)
+plt.show()
 
 grid = sns.FacetGrid(train, col='Survived', row='Pclass', height=2.2, aspect=1.6)
 grid.map(plt.hist, 'Age', alpha=.5, bins=20)
 grid.add_legend()
-
+plt.show()
 train.info()
 
 # 데이터 분석에 영향을 미치지 않는 값들 drop
